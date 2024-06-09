@@ -1,0 +1,27 @@
+<style type="text/css">
+<!--
+.style6 {color: #E14900}
+.tdsh {border-bottom: 0px solid #ccc;
+}
+-->
+</style>
+
+<form action="/user_transaction" method="post" enctype="multipart/form-data" name="form1">
+  
+  <p align="center">MINI STATEMENT </p>
+  <table width="80%" height="106" border="0" align="center">
+    <tr>
+      <td class="tdsh"><h5 class="style6">Bank</h5></td>
+      <td class="tdsh"><h5 class="style6">Amount</h5></td>
+      <td class="tdsh"><h5 class="style6">Date</h5></td>
+      <td class="tdsh"><h5 class="style6">Process</h5></td>
+      <td class="tdsh"><h5 class="style6">Receiver</h5></td>
+    
+    </tr>
+    {% for row in items %}
+  <tr> {% for d in row %}
+    <td class="tdsh">{{ d }}</td>
+    {% endfor %} </tr>
+    {% endfor %}
+  </table>
+</form>
